@@ -18,23 +18,24 @@
 <main>
     <header class="bg-black text-white min-h-[50px] relative overflow-hidden flex justify-center items-center">
 
-        
+    <a href="/" class="flex justify-start text-2xl font-bold ml-4" aria-label="dot dot news">..news</a>
 
     <!-- Navigation -->
-    <nav class="m-auto lg:block sm:hidden " class:open={isMenuOpen}>
+    <nav class="m-auto " class:open={isMenuOpen} aria-label="navigation bar">
         <ul class="flex items-center">
             {#each sections as section}
             <li>
-                <a class="text-center px-4 py-3 text-[17px] no-underline" href={section.path} on:click={() => (isMenuOpen = false)}>{section.name}</a>
+                <a class="text-center px-1 sm:px-4 py-3 text-[17px] no-underline" href={section.path} on:click={() => (isMenuOpen = false)}>{section.name}</a>
             </li>
             {/each}
         </ul>
     </nav>
 
+
     <!-- Hamburger Menu Icon -->
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
-    <div class="lg:hidden sm:block  absolute right-4 top-4 cursor-pointer z-10" on:click={toggleMenu}>
+    <div class="lg:hidden sm:block  absolute right-4 top-4 cursor-pointer z-10" on:click={toggleMenu} aria-label="toggle menu">
         <div class="w-8 h-1 bg-white mb-2 "></div>
         <div class="w-8 h-1 bg-white mb-2"></div>
         <div class="w-8 h-1 bg-white mb-2"></div>
