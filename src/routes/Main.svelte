@@ -3,10 +3,28 @@
 </script>
 
 
-
+<!-- class="min-h-screen" -->
 <main>
-    <h1>Welcome to SvelteKit</h1>
-    <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+            <div class="bg-gray-400 h-24"></div>
+
+        </div>
+    </div>
+
 
 </main>
 
