@@ -1,4 +1,7 @@
 <script lang="ts">
+
+    // Mads says: first attempt at data fetch, grr >:(
+
     // import { onMount } from 'svelte';
 
     // onMount(async() => {
@@ -10,12 +13,152 @@
     //         console.error('Error fetching data:', error);
     //     });
     // });
+
+    import { onMount } from "svelte";
+
+    interface Article {
+        _id: string;
+        title: string;
+        content: any[];
+        slug: string;
+        author: string;
+        date: string;
+    }
+
+    let articles: Article[] = [];
+    let error: string | null = null;
+
+    onMount(async () => {
+        try {
+        const res = await fetch("http://localhost:3001/article/landingpage");
+        if (!res.ok) throw new Error("Failed to fetch data");
+        const data = await res.json();
+        console.log("API response:", data); // show data in console for debugging
+        articles = data;
+        } catch (err) {
+        error = err instanceof Error ? err.message : String(err);
+        }
+    });
+
+    // 🔍 Extract headings, images, text from one article
+    function extractContent(article: Article) {
+        const headings: string[] = [];
+        const paragraphs: string[] = [];
+        const images: { url: string; altText?: string; caption?: string }[] = [];
+
+        article.content.forEach((block) => {
+        if (block.type === "paragraph" && block.text) {
+            paragraphs.push(block.text);
+        }
+
+        if (block.type === "main" && block.contentbody) {
+            block.contentbody.forEach((inner: any) => {
+            if (inner.text) paragraphs.push(inner.text);
+            if (inner.headline) headings.push(inner.headline);
+            });
+            if (block.headline) headings.push(block.headline);
+        }
+
+        if (block.type === "image") {
+            images.push({
+            url: block.url,
+            altText: block.altText,
+            caption: block.caption,
+            });
+        }
+        });
+
+        return { headings, paragraphs, images };
+    }
 </script>
+
+<!-- Mads says: part of the first attempt as well -->
 
 <!-- <div>
     {title}
 </div> -->
 
+<!-- Mads says: -->
+
+    <!-- {#if error}
+        <p class="text-red-500 text-center">{error}</p>
+    {:else if !apiData.landingPage}
+        <p class="text-center">Loading...</p>
+    {:else}
+    
+    {#if apiData.landingPage}
+        {#each apiData.landingPage as item, i}
+            <h1 class="text-2xl font-bold text-gray-800 text-center mb-4">
+                {item.title}
+            </h1>
+        {/each}
+    {/if}
+
+    {/if} -->
+
+
+    <!-- test -->
+    <main class="p-6 space-y-10">
+    {#if error}
+        <p class="text-red-500 text-center">{error}</p>
+    {:else if !articles.length}
+        <p class="text-center text-gray-500">Loading nyheder...</p>
+    {:else}
+        {#each articles as article}
+        {#key article._id}
+            {#await Promise.resolve(extractContent(article)) then content}
+            <article class="border-b border-gray-300 pb-6 mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">{article.title}</h2>
+                <p class="text-sm text-gray-500 mb-4">
+                {article.author} • {new Date(article.date).toLocaleDateString()}
+                </p>
+
+                <!-- Headings -->
+                {#if content.headings.length}
+                <h3 class="text-xl font-semibold mt-4">Overskrifter:</h3>
+                <ul class="list-disc ml-6 text-gray-700">
+                    {#each content.headings as h}
+                    <li>{h}</li>
+                    {/each}
+                </ul>
+                {/if}
+
+                <!-- Paragraphs -->
+                {#if content.paragraphs.length}
+                <div class="mt-4 space-y-3">
+                    {#each content.paragraphs as p}
+                    <p class="text-gray-800">{p}</p>
+                    {/each}
+                </div>
+                {/if}
+
+                <!-- Images -->
+                {#if content.images.length}
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {#each content.images as img}
+                    <figure class="flex flex-col items-center">
+                        <img
+                        src={`http://localhost:3001/uploads/${img.url}`}
+                        alt={img.altText}
+                        class="rounded-lg shadow-md w-full"
+                        />
+                        {#if img.caption}
+                        <figcaption class="text-sm text-gray-500 mt-1">
+                            {img.caption}
+                        </figcaption>
+                        {/if}
+                    </figure>
+                    {/each}
+                </div>
+                {/if}
+            </article>
+            {/await}
+        {/key}
+        {/each}
+    {/if}
+    </main>
+
+    
 <main>
 
     <div class="max-w-4xl mx-auto px-4">

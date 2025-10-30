@@ -46,7 +46,6 @@
 
 <main>
     <p>I am sport(acus)</p>
-    <!-- SNAK MED LARS ASAP -->
 
     {#if error}
         <p class="text-red-500 text-center">{error}</p>
