@@ -160,9 +160,9 @@
         {/key}
         {/each}
     {/if}
-    </main>
+    </main> -->
 
-     -->
+    
 <main>
 
     <div class="max-w-4xl mx-auto px-4">
@@ -185,6 +185,8 @@
             <div class="min-h-36 col-span-1 md:col-span-2">
 
             <!-- Mads says: this was an attempt with flexbox, but it had gone bad >:( -->
+            <!-- Braaaaiiinssss -->
+            
             <!-- <div class="flex flex-col md:flex-row gap-4">
             <div class="p-4 bg-gray-400 order-1 md:order-2">
                 <img src="" alt="img" class="w-full h-auto">

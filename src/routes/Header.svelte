@@ -44,6 +44,7 @@
     </div>
 
     <!-- Hamburger Menu Ikon -->
+    <!-- Yummy hamburger -->
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
     <div class="lg:hidden absolute right-4 top-4 cursor-pointer z-10" on:click={toggleMenu} aria-label="toggle menu">
