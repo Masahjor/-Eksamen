@@ -1,3 +1,5 @@
+<!-- Mads says: snakker lidt denglish i nogle af mine kommentarer, så vær på vagt jeg skifter lidt mellem dansk og engelsk :) -->
+
 <script lang="ts">
 
     // Mads says: first attempt at data fetch, grr >:(
@@ -78,7 +80,7 @@
     {title}
 </div> -->
 
-<!-- Mads says: -->
+<!-- Mads says: loading and error stuff -->
 
     <!-- {#if error}
         <p class="text-red-500 text-center">{error}</p>
@@ -97,8 +99,13 @@
     {/if} -->
 
 
-    <!-- test -->
-    <main class="p-6 space-y-10">
+    <!-- Mads says: dette var for at teste om jeg kunne kalde på landingpages data, den kan godt med tekst -->
+    <!-- men den kan ikke hente billede data og andet fra assets folderen i api'en, så jeg har valgt noget -->
+    <!-- svært, pga. det er en teknisk fejl som jeg ikke har tid til at kunne få styr på, så importere jeg -->
+    <!-- jeg data'en direkte ind i mit projekt så assets folderen er med her. -->
+    <!-- For the sake of efficiency and completion, I must bend some of the rules  -->
+    
+    <!-- <main class="p-6 space-y-10">
     {#if error}
         <p class="text-red-500 text-center">{error}</p>
     {:else if !articles.length}
@@ -113,7 +120,6 @@
                 {article.author} • {new Date(article.date).toLocaleDateString()}
                 </p>
 
-                <!-- Headings -->
                 {#if content.headings.length}
                 <h3 class="text-xl font-semibold mt-4">Overskrifter:</h3>
                 <ul class="list-disc ml-6 text-gray-700">
@@ -123,7 +129,6 @@
                 </ul>
                 {/if}
 
-                <!-- Paragraphs -->
                 {#if content.paragraphs.length}
                 <div class="mt-4 space-y-3">
                     {#each content.paragraphs as p}
@@ -132,13 +137,12 @@
                 </div>
                 {/if}
 
-                <!-- Images -->
                 {#if content.images.length}
                 <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {#each content.images as img}
                     <figure class="flex flex-col items-center">
                         <img
-                        src={`http://localhost:3001/uploads/${img.url}`}
+                        src={`https://localhost:3001/assets/images/${img.url}`}
                         alt={img.altText}
                         class="rounded-lg shadow-md w-full"
                         />
@@ -158,7 +162,7 @@
     {/if}
     </main>
 
-    
+     -->
 <main>
 
     <div class="max-w-4xl mx-auto px-4">
@@ -281,45 +285,67 @@
 
             <div class="min-h-36 col-span-2 md:col-span-2">
 
-            <!-- Mads says: my god I am about to lose it -->
-            <!-- <div class="grid grid-cols-2 gap-4 items-center min-h-36">
-                <div class="bg-gray-400 order-1 min-h-36">
-                    <img src="" alt="img" class="w-full h-auto">
+                <!-- Mads says: my god I am about to lose it -->
+                <!-- <div class="grid grid-cols-2 gap-4 items-center min-h-36">
+                    <div class="bg-gray-400 order-1 min-h-36">
+                        <img src="" alt="img" class="w-full h-auto">
+                    </div>
+
+                    <div class="flex flex-col order-2  bg-amber-400">
+                        <h2 class="text-xl font-bold">headline</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quasi!</p>
+                        <p class="text-gray-400">
+                            <span class="text-red-400">Nyheder</span> | area-date
+                        </p>
+                    </div>
+                </div> -->
+
+                <div class="grid grid-cols-2 gap-4 items-start">
+                    <div class="bg-gray-400 w-full h-full"></div>
+
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-xl font-bold">headline</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
+
+                        <div class="grid grid-cols-2">
+                        <span class="text-amber-400 col-span-2">Nyheder</span>
+                        <span>area-date</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="flex flex-col order-2  bg-amber-400">
-                    <h2 class="text-xl font-bold">headline</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quasi!</p>
-                    <p class="text-gray-400">
-                        <span class="text-red-400">Nyheder</span> | area-date
-                    </p>
+                <div class="grid grid-cols-2 gap-4 items-start pt-4">
+                    <div class="bg-gray-400 w-full h-full"></div>
+
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-xl font-bold">headline</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
+
+                        <div class="grid grid-cols-2">
+                        <span class="text-amber-400 col-span-2">Nyheder</span>
+                        <span>area-date</span>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+                
+                <div class="grid grid-cols-2 gap-4 items-start pt-4">
+                    <div class="bg-gray-400 w-full h-full"></div>
 
-        <div class="grid grid-cols-2 gap-4 items-start">
-            <!-- Image on the left -->
-            <div class="bg-gray-400 w-full h-32"></div>
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-xl font-bold">headline</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
 
-            <!-- Text on the right -->
-            <div class="flex flex-col gap-2">
-                <h2 class="text-xl font-bold">headline</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
-
-                <!-- Nested grid for the span to span 2 columns -->
-                <div class="grid grid-cols-2">
-                <span class="text-amber-400 col-span-2">Nyheder</span>
-                <span>area-date</span>
+                        <div class="grid grid-cols-2">
+                        <span class="text-amber-400 col-span-2">Nyheder</span>
+                        <span>area-date</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-
-
 
             </div>
 
             <div class="col-span-2 md:col-span-4 min-h-12 mt-8">
-                <h2 class="text-2xl">Video</h2>
+                <h2 class="text-2xl">Podcast</h2>
             </div>
 
             <div class="bg-gray-400 h-24"></div>
