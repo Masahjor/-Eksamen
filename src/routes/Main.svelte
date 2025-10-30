@@ -169,15 +169,15 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="col-span-2 md:col-span-4 mt-8 md:mt-18">
                 <h2 class="text-2xl">
-                    Headline
+                    Ny grøn energiplan sat i værk
                 </h2>
                 <p class="text-gray-400">
-                    <span class="text-amber-400">Nyheder</span> | area-date
+                    <span class="text-amber-400">Nyheder</span> | 24 minutter siden
                 </p>
             </div>
             
             <div class="bg-gray-400 col-span-2 row-span-2">
-                <img src="" alt="img here" class="w-full h-full object-cover"/>
+                <img src="src\assets\images\news_2.jpg" alt="img here" class="w-full h-full object-cover"/>
             </div>
 
 
@@ -185,7 +185,6 @@
             <div class="min-h-36 col-span-1 md:col-span-2">
 
             <!-- Mads says: this was an attempt with flexbox, but it had gone bad >:( -->
-            <!-- Braaaaiiinssss -->
             
             <!-- <div class="flex flex-col md:flex-row gap-4">
             <div class="p-4 bg-gray-400 order-1 md:order-2">
@@ -201,15 +200,15 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class=" bg-gray-400 md:col-start-2 md:row-start-1">
-                        <img src="" alt="img" class="w-full h-auto">
+                        <img src="src\assets\images\news_1.jpg" alt="img" class="w-full h-auto">
                     </div>
 
                     <div class="flex flex-col md:col-start-1 md:row-start-1">
-                        <p class="text-gray-400">
-                            <span class="text-amber-400">Nyheder</span> | area-date
-                        </p>
-                        <h2>headline</h2>
+                        <h2 class="text-xl">Undervisningsreform på vej i naturvidenskab</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quasi!</p>
+                        <p class="text-gray-400">
+                            <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                        </p>
                     </div>
                 </div>
 
@@ -218,18 +217,17 @@
 
 
             <div class="min-h-36 col-span-1 md:col-span-2">
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class=" bg-gray-400 md:col-start-2 md:row-start-1">
-                        <img src="" alt="img" class="w-full h-auto">
+                        <img src="src\assets\images\news_3.jpg" alt="img" class="w-full h-auto">
                     </div>
 
                     <div class="flex flex-col md:col-start-1 md:row-start-1">
-                        <p class="text-gray-400">
-                            <span class="text-amber-400">Nyheder</span> | area-date
-                        </p>
-                        <h2>headline</h2>
+                        <h2 class="text-xl">headline</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quasi!</p>
+                        <p class="text-gray-400">
+                            <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                        </p>
                     </div>
                 </div>
 
@@ -238,7 +236,7 @@
             <div class="col-span-2 md:col-span-4 invisible min-h-12"></div>
 
             <div class="bg-gray-400 col-span-2 row-span-2 flex flex-col justify-between">
-                <img src="" alt="img" class="w-full h-32 object-cover">
+                <img src="src\assets\images\political_4.jpg" alt="img" class="w-full h-48 object-cover">
                 <div class="bg-black p-2">
                 <p class="text-white text-sm">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, voluptatum?
@@ -247,7 +245,7 @@
             </div>
             
             <div class="bg-gray-400 col-span-2 row-span-2 flex flex-col justify-between">
-                <img src="" alt="img" class="w-full h-32 object-cover">
+                <img src="src\assets\images\political_7.jpg" alt="img" class="w-full h-48 object-cover">
                 <div class="bg-black p-2">
                 <p class="text-white text-sm">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, voluptatum?
@@ -261,31 +259,41 @@
 
 
             <div>
-                <img class="w-full h-32 bg-gray-400" src="" alt="img">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
-                <span class="text-amber-400">Nyheder</span> | area-date
+                <img class="w-full h-32 bg-gray-400" src="src\assets\images\political_3.jpg" alt="img">
+                <p>Lorem ipsum dolor sit amet consectetur a</p>
+                    <p class="text-gray-400">
+                        <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                    </p>
             </div>
                <div>
-                <img class="w-full h-32 bg-gray-400" src="" alt="img">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
-                <span class="text-amber-400">Nyheder</span> | area-date
+                <img class="w-full h-32 bg-gray-400" src="src\assets\images\political_3.jpg" alt="img">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+                    <p class="text-gray-400">
+                        <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                    </p>
             </div>
             <div>
-                <img class="w-full h-32 bg-gray-400" src="" alt="img">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
-                <span class="text-amber-400">Nyheder</span> | area-date
+                <img class="w-full h-32 bg-gray-400" src="src\assets\images\political_3.jpg" alt="img">
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <p class="text-gray-400">
+                        <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                    </p>
             </div>
             <div>
-                <img class="w-full h-32 bg-gray-400" src="" alt="img">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
-                <span class="text-amber-400">Nyheder</span> | area-date
+                <img class="w-full h-32 bg-gray-400" src="src\assets\images\political_3.jpg" alt="img">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    <p class="text-gray-400">
+                        <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                    </p>
             </div>
             
             <div class="col-span-2 md:col-span-4 min-h-12 mt-8">
                 <h2 class="text-2xl">Video</h2>
             </div>
 
-            <div class="min-h-36 col-span-2 md:col-span-2">
+
+
+            <div class="min-h-36 col-span-2 md:col-span-4 md:grid md:grid-cols-4 md:grid-rows-3 md:gap-4">
 
                 <!-- Mads says: my god I am about to lose it -->
                 <!-- <div class="grid grid-cols-2 gap-4 items-center min-h-36">
@@ -302,49 +310,73 @@
                     </div>
                 </div> -->
 
-                <div class="grid grid-cols-2 gap-4 items-start">
-                    <div class="bg-gray-400 w-full h-full"></div>
+                <div class="md:col-span-2 md:row-span-3 flex flex-col gap-4">
+                    <!-- Row 1 -->
+                    <div class="grid grid-cols-2 gap-4 items-start">
+                    <div class="bg-gray-400 h-full">
+                        <img class="h-full" src="src\assets\images\political_3.jpg" alt="img">
+                    </div>
 
                     <div class="flex flex-col gap-2">
-                        <h2 class="text-xl font-bold">headline</h2>
+                        <h2 class="text-xl font-bold">Loritop Crendor Vantius</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
 
                         <div class="grid grid-cols-2">
-                        <span class="text-amber-400 col-span-2">Nyheder</span>
-                        <span>area-date</span>
+                        <p class="text-gray-400 text-xs">
+                            <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                        </p>
                         </div>
                     </div>
-                </div>
+                    </div>
 
-                <div class="grid grid-cols-2 gap-4 items-start pt-4">
-                    <div class="bg-gray-400 w-full h-full"></div>
+                    <!-- Row 2 -->
+                    <div class="grid grid-cols-2 gap-4 items-start pt-4">
+                    <div class="bg-gray-400 h-full">
+                        <img class="h-full" src="src\assets\images\political_3.jpg" alt="img">
+                    </div>
 
                     <div class="flex flex-col gap-2">
-                        <h2 class="text-xl font-bold">headline</h2>
+                        <h2 class="text-xl font-bold">Loritop Crendor Vantius</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
 
                         <div class="grid grid-cols-2">
-                        <span class="text-amber-400 col-span-2">Nyheder</span>
-                        <span>area-date</span>
+                            <p class="text-gray-400 text-xs">
+                                <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                            </p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4 items-start pt-4">
-                    <div class="bg-gray-400 w-full h-full"></div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="grid grid-cols-2 gap-4 items-start pt-4">
+                    <div class="bg-gray-400 h-full">
+                        <img class="h-full" src="src\assets\images\political_3.jpg" alt="img">
+                    </div>
 
                     <div class="flex flex-col gap-2">
-                        <h2 class="text-xl font-bold">headline</h2>
+                        <h2 class="text-xl font-bold">Loritop Crendor Vantius</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, numquam.</p>
 
                         <div class="grid grid-cols-2">
-                        <span class="text-amber-400 col-span-2">Nyheder</span>
-                        <span>area-date</span>
+                            <p class="text-gray-400 text-xs">
+                                <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                            </p>
                         </div>
+                    </div>
                     </div>
                 </div>
 
+                <div class="hidden md:block md:col-start-3 md:col-span-2 md:row-start-1 md:row-span-3">
+                    <img src="src\assets\images\political_11.jpg" alt="">
+                <h2>Undervisningsreform på vej</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, quos.</p>
+                                
+                    <p class="text-gray-400 text-xs">
+                        <span class="text-amber-400">Nyheder</span> | 24 minutter siden
+                    </p>
+                </div>
             </div>
+
 
             <div class="col-span-2 md:col-span-4 min-h-12 mt-8">
                 <h2 class="text-2xl">Podcast</h2>
